@@ -1,7 +1,8 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* scroll-behavior: smooth; */
 }
 
 .container {
@@ -16,14 +17,13 @@
     /* align-items: center;  */
 }
 
-.container>* {
-    transition: transform 0.8s ease-in-out;
 
-}
 
 .container>* {
     transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.48, 1.36);
 }
+
+
 
 #section1 {
     /* display: flex;
@@ -42,7 +42,7 @@ nav {
 
 }
 
-nav>ul {}
+/* nav>ul {} */
 
 
 nav>ul>li {

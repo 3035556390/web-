@@ -1,8 +1,88 @@
 #section2 {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background-color: rgb(247, 101, 16);
     overflow: hidden;
 
+    /* color: transparent; */
+    opacity: 1;
+}
+
+.section2-main {
+
+    width: 1200px;
+    height: 600px;
+
+    /* margin: 0 auto; */
+    border: 1px solid #161313;
+
+
+}
+
+.section2-maintop>ul>li {
+    position: relative;
+    display: inline;
+    float: left;
+    margin: 0;
+    background-color: antiquewhite;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.section2-maintop>ul>li>a {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    width: 200px;
+    height: 100px;
+}
+
+.section2-maintop {
+    overflow: hidden;
+    /* 或者 clearfix 方法 */
+}
+
+/* 当元素设置 overflow: hidden 时，会触发创建块级格式化上下文（Block Formatting Context,
+BFC）： 
+ .section2-maintop {
+    overflow: hidden;
+    创建BFC
+}
+
+2. BFC 的特性 BFC 具有以下关键特性： 包含浮动元素：BFC 会自动包含其内部的所有浮动元素 计算高度时考虑浮动元素：BFC 在计算自身高度时会将浮动元素考虑在内 与浮动元素不重叠：BFC 区域不会与浮动元素重叠 */
+
+
+.section2-mainbody {
+    position: absolute;
+    /* right: auto; */
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.section2-mbl>p {
+
+    width: 240px;
+    height: 55.5px;
+    margin-left: 30px;
+    clear: both;
+    line-height: 55.5px;
+    background-color: bisque;
+}
+
+.section2-mbr {
+    width: 930px;
+    height: 500px;
+    background-color: aqua;
+    /* clear: both; */
+}
+
+.section2-mbr>img {
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+    margin: 25px 5%;
 }
