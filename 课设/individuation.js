@@ -13,7 +13,12 @@ container.addEventListener("wheel", function (e) {
             currentindex++;
             sectionremove();
         }
-    } else {
+        else {
+            currentindex = 0;
+            sectionremove();
+        }
+    }
+    else {
         if (currentindex > 0) {
             currentindex--;
             sectionremove();
@@ -171,5 +176,72 @@ Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
 
 
     });
+
+});
+
+//section3
+
+
+
+var section3_currentli = 0;
+var imgmove = 0;
+var section3_imginthree = 0;
+const rbutton = document.querySelector(".section3-mainright>.rbutton");
+const lbutton = document.querySelector(".section3-mainright>.lbutton");
+const mrli = document.querySelectorAll(".section3-mainright>.mrimg>li ");
+
+if (mrli.length > 0) {
+    mrli[0].classList.remove("shadow");
+}
+
+
+rbutton.addEventListener("click", function () {
+    if (section3_currentli < mrli.length - 1) {
+
+
+
+        mrli[section3_currentli].classList.add("shadow");
+        section3_currentli++;
+        mrli[section3_currentli].classList.remove("shadow")
+        console.log(section3_currentli);
+
+        //先加,再移动
+        if (section3_currentli % 3 == 0) {
+            imgmove -= 600;
+            Array.from(mrli).forEach(function (li, index) {
+
+                console.log(imgmove)
+                li.style.transform = "translateX(" + (imgmove) + "px)";
+            });
+        }
+
+
+    }
+
+});
+
+lbutton.addEventListener("click", function () {
+    if (section3_currentli > 0) {
+
+        //先移动,再减
+        if (section3_currentli % 3 == 0) {
+            imgmove += 600;
+            Array.from(mrli).forEach(function (li, index) {
+                console.log(imgmove)
+                li.style.transform = "translateX(" + (imgmove) + "px)";
+            });
+
+        }
+
+
+        mrli[section3_currentli].classList.add("shadow");
+
+        section3_currentli--
+        mrli[section3_currentli].classList.remove("shadow")
+        console.log(section3_currentli);
+
+
+
+    }
 
 });
