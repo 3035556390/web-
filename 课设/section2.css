@@ -57,7 +57,7 @@ BFC）：
 .section2-mainbody {
     position: absolute;
     /* right: auto; */
-    opacity: 0.5;
+    opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
     justify-content: center;

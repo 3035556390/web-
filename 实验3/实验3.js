@@ -1,6 +1,13 @@
 const elements = document.getElementsByTagName("dd");
 
-
+// Array.from(elements).forEach(element => {
+//     element.addEventListener("click", function () {
+//         Array.from(elements).forEach(el => {
+//             el.classList.remove("active");
+//         })
+//         element.classList.add("active");
+//     })
+// })
 const li = document.querySelectorAll(".daohang>ul>li");
 
 Array.from(li).forEach(element => {

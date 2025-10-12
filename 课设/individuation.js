@@ -1,4 +1,4 @@
-//all
+//滚轮滚动整体板块
 const sections = document.querySelectorAll(".container>*");
 const container = document.querySelector(".container");
 let currentindex = 0;
@@ -91,7 +91,7 @@ container.addEventListener("wheel", function (e) {
 // });
 
 
-
+//点击导航栏滚动整体板块
 const nav_li = document.querySelectorAll("#section1>nav>ul>li");
 
 Array.from(nav_li).forEach(function (li, index) {
@@ -106,7 +106,7 @@ Array.from(nav_li).forEach(function (li, index) {
     })
 
 })
-
+//滚动方法
 function sectionremove() {
     isScrolling = true;
     const translateValue = (-currentindex) * 100;
@@ -130,7 +130,10 @@ function sectionremove() {
 //     });
 // });
 
+
+
 //section1
+//板块1图片的滚动
 const imgofsection1 = document.querySelectorAll("#mainright>img");
 const section1_mainleft_li = document.querySelectorAll("#mainleft>ul>*");
 
@@ -143,14 +146,23 @@ Array.from(section1_mainleft_li).forEach(function (element, liindex) {
 });
 
 
+
+
 //section2
 
 
 const section2_maintop_li = document.querySelectorAll(".section2-maintop>ul>li");
 const section2_mainbodys = document.querySelectorAll(".section2-mainbody");
+
+//初始化显示第一个主体
+section2_mainbodys[0].style.opacity = "1";
+
+//导航栏控制主体的隐现透明度
 Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
 
     currentli.addEventListener("click", function () {
+
+        //点击导航栏颜色变化
         Array.from(section2_maintop_li).forEach(function (li, index) {
             if (currentindex === index) {
                 li.style.backgroundColor = "white";
@@ -161,6 +173,8 @@ Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
         });
 
 
+
+        //图片隐现
         Array.from(section2_mainbodys).forEach(function (mainbody, bodyindex) {
             mainbody.style.opacity = "0";
 
@@ -179,10 +193,12 @@ Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
 
 });
 
+
+
+
 //section3
 
-
-
+//按钮控制图片的移动及隐现
 var section3_currentli = 0;
 var imgmove = 0;
 var section3_imginthree = 0;
