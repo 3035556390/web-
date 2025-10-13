@@ -201,7 +201,7 @@ Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
 //按钮控制图片的移动及隐现
 var section3_currentli = 0;
 var imgmove = 0;
-var section3_imginthree = 0;
+
 const rbutton = document.querySelector(".section3-mainright>.rbutton");
 const lbutton = document.querySelector(".section3-mainright>.lbutton");
 const mrli = document.querySelectorAll(".section3-mainright>.mrimg>li ");

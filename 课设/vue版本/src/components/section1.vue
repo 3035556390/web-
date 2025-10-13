@@ -1,0 +1,199 @@
+<template> 
+
+        <div id="section1" class="sectionone">
+    <nav>
+      <ul>
+        <li><a href="#" data-index="0">Home</a></li>
+        <li><a href="#" data-index="1">About</a></li>
+        <li><a href="#" data-index="2">Services</a></li>
+        <li><a href="#" data-index="3">Contact</a></li>
+        <li><a href="#" data-index="4">Blog</a></li>
+      </ul>
+    </nav>
+            <div id="main">
+                <div id="mainleft">
+                    <ul>
+                        <div class="headpicture"></div>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                            <a href="#">Home</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div id="mainright">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+                    <img src="/picture/f.jpg" alt="">
+       
+
+                </div>
+
+
+            </div>
+        </div>
+
+</template>
+<style>
+
+
+
+
+#section1 {
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right top, #c0fff2, #48f1d5);
+}
+
+nav {
+
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    /* background: linear-gradient(to right top, rgb(192, 255, 242), rgb(72, 241, 213)) 0% 0% / 100%; */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* nav>ul {} */
+
+
+nav>ul>li {
+
+
+    display: inline-block;
+    /* color: aliceblue; */
+    /* background-color: antiquewhite; */
+}
+
+nav>ul>li>a {
+    display: block;
+    width: 150px;
+    height: 60px;
+    color: #ffffff;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
+}
+
+nav>ul>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #426696;
+    border-bottom: 3px solid #426696;
+}
+
+
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* width: 1200px;
+    height: 600px; */
+
+    margin: 35px 0;
+    /* background-color: bisque; */
+
+    overflow: hidden;
+
+}
+
+#mainleft {
+
+
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 25px;
+    /* background-color: #426696; */
+    /* margin-right: 20px; */
+}
+
+#mainleft>ul>div {
+
+    width: 360px;
+    height: 168px;
+    background-color: rgb(142, 142, 43);
+    border-radius: 0px;
+    transition: background-color 0.5s ease-in-out, border-radius 1s ease-in-out;
+}
+
+#mainleft>ul>li {
+
+    width: 360px;
+    height: 72px;
+    text-align: center;
+    line-height: 72px;
+    background-color: aquamarine;
+    border-radius: 0px;
+    transition: background-color 0.5s ease-in-out, border-radius 1s ease-in-out;
+
+}
+
+
+#mainleft>ul>li:hover,
+#mainleft>ul>div:hover {
+    background-color: rgb(221, 236, 249);
+    border-radius: 25px;
+}
+
+#mainright {
+    width: 824px;
+    height: 600px;
+    display: inline;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: chartreuse;
+}
+
+#mainright>img {
+    width: 824px;
+    height: 600px;
+    transition: transform 1s cubic-bezier(0.17, 0.67, 0.48, 1.36);
+    display: block;
+}
+</style>
+<script>
+export default {
+    mounted() {
+        const imgofsection1 = document.querySelectorAll("#mainright>img");
+        const section1_mainleft_li = document.querySelectorAll("#mainleft>ul>*");
+
+        Array.from(section1_mainleft_li).forEach(function (element, liindex) {
+            element.addEventListener("mouseover", function () {
+                Array.from(imgofsection1).forEach(img => {
+                    img.style.transform = "translateY(" + (liindex * -100) + "%)";
+                });
+            });
+        });
+
+    }
+}
+</script>
+
