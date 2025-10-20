@@ -1,9 +1,12 @@
-import './style.css';
 import { createApp } from 'vue'
-import ArcoVue from '@arco-design/web-vue';
-import App from './App.vue';
-import '@arco-design/web-vue/dist/arco.css';
+// import './style.css'
+import App from './App.vue'
+import { Button, Tag, ConfigProvider } from 'vue-amazing-ui'
+import 'vue-amazing-ui/es/button/Button.css'
+import 'vue-amazing-ui/es/tag/Tag.css'
+import router from './router'
 
-const app = createApp(App);
-app.use(ArcoVue);
-app.mount('#app');
+const app = createApp(App)
+app.use(Button).use(Tag).use(ConfigProvider).use(router)
+
+app.mount('#app')

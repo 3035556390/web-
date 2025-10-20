@@ -1,5 +1,5 @@
 {
-  "name": "vueproject",
+  "name": "vue-",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.22"
+    "vue": "^3.5.22",
+    "vue-amazing-ui": "^2.4.22",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "unplugin-vue-components": "^29.1.0",
     "vite": "^7.1.7"
   }
 }

@@ -1,6 +1,6 @@
 <template>
- <div id="section4" class="sectionfour"></div>
-</template>    
+    <div id="section4" class="sectionfour"></div>
+</template>
 
 <script>
 </script>
@@ -13,4 +13,4 @@
     overflow: hidden;
 
 }
-</style>    
+</style>

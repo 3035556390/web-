@@ -1,75 +1,72 @@
-<template> 
+<template>
 
-        <div id="section1" class="sectionone">
-    <nav>
-      <ul>
-        <li><a href="#" data-index="0">Home</a></li>
-        <li><a href="#" data-index="1">About</a></li>
-        <li><a href="#" data-index="2">Services</a></li>
-        <li><a href="#" data-index="3">Contact</a></li>
-        <li><a href="#" data-index="4">Blog</a></li>
-      </ul>
-    </nav>
-            <div id="main">
-                <div id="mainleft">
-                    <ul>
-                        <div class="headpicture"></div>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                            <a href="#">Home</a>
-                        </li>
-                    </ul>
+    <div id="section1" class="sectionone">
+        <nav>
+            <ul>
+                <li><a href="#" data-index="0">Home</a></li>
+                <li><a href="#" data-index="1">About</a></li>
+                <li><a href="#" data-index="2">Services</a></li>
+                <li><a href="#" data-index="3">Contact</a></li>
+                <li><a href="#" data-index="4">Blog</a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <div id="mainleft">
+                <ul>
+                    <div class="headpicture"></div>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
 
-                </div>
-                <div id="mainright">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-                    <img src="/picture/f.jpg" alt="">
-       
-
-                </div>
+            </div>
+            <div id="mainright">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
+                <img src="../picture/f.jpg" alt="">
 
 
             </div>
+
+
         </div>
+    </div>
 
 </template>
 <style>
-
-
-
-
 #section1 {
     /* display: flex;
     justify-content: center; */
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right top, #c0fff2, #48f1d5);
+    height: 100%;
+    position: relative;
+    /* background: linear-gradient(to right top, #c0fff2, #48f1d5); */
 }
 
 nav {
@@ -196,4 +193,3 @@ export default {
     }
 }
 </script>
-

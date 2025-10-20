@@ -1,71 +1,72 @@
 <template>
-        <div id="section2" class="sectiontwo">
-            <div class="section2-main">
-                <div class="section2-maintop">
-                    <ul>
-                        <li><a href="#">个人资料</a></li>
-                        <li><a href="#">个人图片</a></li>
-                        <li><a href="#">个人技能</a></li>
-                        <li><a href="#">个人QQ</a></li>
-                        <li><a href="#">个人微信</a></li>
-                        <li><a href="#">杂七杂八</a></li>
-                    </ul>
-
-                </div>
-                <div class="section2-mainbodycontainer">
-                    <div class="section2-mainbody">
-                        <div class="section2-mbl">
-                            <p>*</p>
-                            <p>姓名：张三</p>
-                            <p>性别：男</p>
-                            <p>生日：1999-01-01</p>
-                            <p>爱好：篮球、足球、乒乓球</p>
-                            <p>星座：双子座</p>
-                            <p>八嘎</p>
-                            <p>八嘎</p>
-                            <p>*</p>
-                        </div>
-                        <div class="section2-mbr">
-                            <img src="/picture/f.jpg" alt="">
-                        </div>
-
-
-                    </div>
-                    <div class="section2-mainbody">
-                        <div class="section2-mbl">
-                            <p>*</p>
-                            <p>姓名：</p>
-                            <p>性别：</p>
-                            <p>生日：1-01</p>
-                            <p>爱好：足球、乒乓球</p>
-                            <p>星座：座</p>
-                            <p>八嘎</p>
-                            <p>八嘎</p>
-                            <p>*</p>
-                        </div>
-                        <div class="section2-mbr">
-                            <img src="/picture/g.jpg" alt="">
-                        </div>
-
-
-                    </div>
-                </div>
+    <div id="section2" class="sectiontwo">
+        <div class="section2-main">
+            <div class="section2-maintop">
+                <ul>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">个人图片</a></li>
+                    <li><a href="#">个人技能</a></li>
+                    <li><a href="#">个人QQ</a></li>
+                    <li><a href="#">个人微信</a></li>
+                    <li><a href="#">杂七杂八</a></li>
+                </ul>
 
             </div>
+            <div class="section2-mainbodycontainer">
+                <div class="section2-mainbody">
+                    <div class="section2-mbl">
+                        <p>*</p>
+                        <p>姓名：张三</p>
+                        <p>性别：男</p>
+                        <p>生日：1999-01-01</p>
+                        <p>爱好：篮球、足球、乒乓球</p>
+                        <p>星座：双子座</p>
+                        <p>八嘎</p>
+                        <p>八嘎</p>
+                        <p>*</p>
+                    </div>
+                    <div class="section2-mbr">
+                        <img src="../picture/f.jpg" alt="">
+                    </div>
 
+
+                </div>
+                <div class="section2-mainbody">
+                    <div class="section2-mbl">
+                        <p>*</p>
+                        <p>姓名：</p>
+                        <p>性别：</p>
+                        <p>生日：1-01</p>
+                        <p>爱好：足球、乒乓球</p>
+                        <p>星座：座</p>
+                        <p>八嘎</p>
+                        <p>八嘎</p>
+                        <p>*</p>
+                    </div>
+                    <div class="section2-mbr">
+                        <img src="../picture/g.jpg" alt="">
+                    </div>
+
+
+                </div>
+            </div>
 
         </div>
-</template>    
+
+
+    </div>
+</template>
 
 
 <style>
 #section2 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgb(247, 101, 16);
+    /* background-color: rgb(247, 101, 16); */
     overflow: hidden;
 
     /* color: transparent; */
@@ -74,12 +75,19 @@
 
 .section2-main {
 
-    width: 1200px;
+    width: 1202px;
     height: 600px;
 
     /* margin: 0 auto; */
     border: 1px solid #161313;
 
+
+}
+
+.section2-maintop>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
 }
 
@@ -146,52 +154,52 @@ BFC）：
     height: 90%;
     border-radius: 25px;
     margin: 25px 5%;
-}</style>
+}
+</style>
 
 
 <script>
 export default {
-    mounted() { 
+    mounted() {
         //section2
 
 
-const section2_maintop_li = document.querySelectorAll(".section2-maintop>ul>li");
-const section2_mainbodys = document.querySelectorAll(".section2-mainbody");
+        const section2_maintop_li = document.querySelectorAll(".section2-maintop>ul>li");
+        const section2_mainbodys = document.querySelectorAll(".section2-mainbody");
 
-//初始化显示第一个主体
-section2_mainbodys[0].style.opacity = "1";
+        //初始化显示第一个主体
+        section2_mainbodys[0].style.opacity = "1";
 
-//导航栏控制主体的隐现透明度
-Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
+        //导航栏控制主体的隐现透明度
+        Array.from(section2_maintop_li).forEach(function (currentli, currentindex) {
 
-    currentli.addEventListener("click", function (e) {
-         e.preventDefault(); 
-        // 点击导航栏颜色变化
-        Array.from(section2_maintop_li).forEach((li, index) => {
-          li.style.backgroundColor = currentindex === index ? "white" : "antiquewhite";
+            currentli.addEventListener("click", function (e) {
+                e.preventDefault();
+                // 点击导航栏颜色变化
+                Array.from(section2_maintop_li).forEach((li, index) => {
+                    li.style.backgroundColor = currentindex === index ? "white" : "antiquewhite";
+                });
+
+
+
+                //图片隐现
+                Array.from(section2_mainbodys).forEach(function (mainbody) {
+                    mainbody.style.opacity = "0";
+
+                });
+
+                setTimeout(() => {
+                    section2_mainbodys[currentindex].style.opacity = "1";
+
+                }, 500);
+
+
+            });
+
         });
-
-
-
-        //图片隐现
-        Array.from(section2_mainbodys).forEach(function (mainbody) {
-            mainbody.style.opacity = "0";
-
-        });
-
-        setTimeout(() => {
-            section2_mainbodys[currentindex].style.opacity = "1";
-
-        }, 500);
-
-
-    });
-
-});
     }
 
 }
 
 
 </script>
-

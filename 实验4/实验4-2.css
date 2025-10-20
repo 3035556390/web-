@@ -1,0 +1,106 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(209, 169, 87);
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+.form {}
+
+.form-group {
+    position: relative;
+    /* background-color: antiquewhite; */
+    width: 350px;
+    height: 40px;
+    margin: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: 10px;
+}
+
+.form-register {
+    /* position: relative; */
+    /* background-color: antiquewhite; */
+    width: 350px;
+    height: 60px;
+    margin: 10px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.form-register>span {
+    /* background-color: aqua; */
+    height: 25px;
+    line-height: 25px;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+
+    margin-left: 0;
+}
+
+input[type="submit"] {
+    background-color: aqua;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.btn1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(37, 122, 234);
+    border-radius: 5px;
+
+}
+
+.btn2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #10f920;
+}
+
+a {
+    color: rgb(27, 149, 230);
+    text-decoration: none;
+}
