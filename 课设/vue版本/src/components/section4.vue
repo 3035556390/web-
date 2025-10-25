@@ -1,10 +1,10 @@
 <template>
-    <div id="section4" class="sectionfour"></div>
+    <div id="section4"></div>
 </template>
 
 <script>
 </script>
-<style>
+<style scoped>
 #section4 {
 
     width: 100%;

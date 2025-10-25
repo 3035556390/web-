@@ -1,15 +1,8 @@
 <template>
 
-    <div id="section1" class="sectionone">
-        <nav>
-            <ul>
-                <li><a href="#" data-index="0">Home</a></li>
-                <li><a href="#" data-index="1">About</a></li>
-                <li><a href="#" data-index="2">Services</a></li>
-                <li><a href="#" data-index="3">Contact</a></li>
-                <li><a href="#" data-index="4">Blog</a></li>
-            </ul>
-        </nav>
+    <div id="section1">
+
+
         <div id="main">
             <div id="mainleft">
                 <ul>
@@ -59,59 +52,23 @@
     </div>
 
 </template>
-<style>
+<style scoped>
 #section1 {
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 100vh;
+    /* position: relative; */
     /* background: linear-gradient(to right top, #c0fff2, #48f1d5); */
 }
 
-nav {
-
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    /* background: linear-gradient(to right top, rgb(192, 255, 242), rgb(72, 241, 213)) 0% 0% / 100%; */
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* nav>ul {} */
-
-
-nav>ul>li {
-
-
-    display: inline-block;
-    /* color: aliceblue; */
-    /* background-color: antiquewhite; */
-}
-
-nav>ul>li>a {
-    display: block;
-    width: 150px;
-    height: 60px;
-    color: #ffffff;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
-}
-
-nav>ul>li>a:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #426696;
-    border-bottom: 3px solid #426696;
-}
 
 
 
 #main {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: end;
     /* width: 1200px;
     height: 600px; */
 

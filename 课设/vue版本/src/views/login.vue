@@ -45,7 +45,7 @@ const login = () => {
 }
 
 </script>
-<style>
+<style scoped>
 .box-container {
     display: flex;
     justify-content: center;

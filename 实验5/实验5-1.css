@@ -1,0 +1,73 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 300px;
+    height: 350px;
+    background-color: rgba(92, 184, 106, 0.515);
+
+}
+
+tr>td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    height: 30px;
+
+}
+
+
+.remember {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+
+}
+
+
+.page1 {
+    position: absolute;
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+}
+
+.page2 {
+    position: absolute;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.page1:hover {
+    box-shadow: inset;
+    transform: translateX(-150px);
+}
+
+.page1:hover~.page2 {
+    display: flex;
+    opacity: 1;
+    transform: translateX(150px);
+
+}

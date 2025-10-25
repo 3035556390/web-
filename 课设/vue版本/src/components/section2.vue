@@ -1,5 +1,5 @@
 <template>
-    <div id="section2" class="sectiontwo">
+    <div id="section2">
         <div class="section2-main">
             <div class="section2-maintop">
                 <ul>
@@ -58,7 +58,7 @@
 </template>
 
 
-<style>
+<style scoped>
 #section2 {
     position: relative;
     display: flex;
@@ -67,6 +67,7 @@
     width: 100%;
     height: 100vh;
     /* background-color: rgb(247, 101, 16); */
+
     overflow: hidden;
 
     /* color: transparent; */

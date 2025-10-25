@@ -1,9 +1,9 @@
 <template>
-  <div id="section3" class="sectionthree">
+  <div id="section3">
     <div class="section3-main">
       <div class="section3-mainleft"></div>
       <div class="section3-mainright">
-        <button class="lbutton"> ⬅!
+        <button class="section3-lbutton"> ⬅!
         </button>
         <ul class="mrimg">
           <li class="shadow"><img src="../picture/a.jpg"></li>
@@ -21,7 +21,7 @@
           <!-- <img src="picture/s-1.jpg" alt=""> -->
 
         </ul>
-        <button class="rbutton"> ➡!
+        <button class="section3-rbutton"> ➡!
         </button>
       </div>
 
@@ -37,8 +37,8 @@ export default {
     // 按钮控制图片的移动及隐现
     let section3_currentli = 0;
     let imgmove = 0;
-    const rbutton = document.querySelector(".section3-mainright>.rbutton");
-    const lbutton = document.querySelector(".section3-mainright>.lbutton");
+    const rbutton = document.querySelector(".section3-mainright>.section3-rbutton");
+    const lbutton = document.querySelector(".section3-mainright>.section3-lbutton");
     const mrli = document.querySelectorAll(".section3-mainright>.mrimg>li ");
 
     if (mrli.length > 0) {
@@ -83,7 +83,7 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 #section3 {
 
   width: 100%;
@@ -127,7 +127,7 @@ export default {
 }
 
 /* From www.lingdaima.com */
-button {
+.section3-mainright>button {
   width: 50px;
   height: 40px;
   background-color: #fff;

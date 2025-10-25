@@ -3,11 +3,12 @@
 
     <div class="container">
         <background />
-        <Section1 />
-        <section2 />
-        <Section3 />
+        <sectionnav class="section_nav" />
+        <Section1 class="section" />
+        <section2 class="section" />
+        <Section3 class="section" />
 
-        <section4 />
+        <Section4 class="section" />
 
         <!-- <Teleport to="body">
             <div style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
@@ -27,11 +28,13 @@ import Section2 from '../components/section2.vue'
 import Section3 from '../components/section3.vue'
 import Section4 from '../components/section4.vue'
 import Section5 from '../components/section5.vue'
+import sectionnav from '../components/sectionnav.vue'
 import { ConfigProvider } from 'vue-amazing-ui'
 
 export default {
     components: {
         background,
+        sectionnav,
         Section1,
         Section2,
         Section3,
@@ -53,8 +56,10 @@ export default {
 
 
         //滚轮滚动整体板块
-        const sections = document.querySelectorAll(".container>*");
+        const sections = document.querySelectorAll(".container>.section");
         const container = document.querySelector(".container");
+        console.log('Container:', document.querySelector(".container"));
+
         let currentindex = 0;
         let isScrolling = false;
 
@@ -80,86 +85,21 @@ export default {
             }
         }, { passive: false });
 
-
-
-
-
-        // 平滑滚动到指定元素
-        // function smoothScrollTo(element, duration = 800) {
-        //     // 获取目标元素距离顶部的距离
-        //     const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        //     // 获取当前滚动位置
-        //     const startPosition = window.pageYOffset;
-        //     // 计算滚动距离
-        //     const distance = targetPosition - startPosition;
-        //     // 记录动画开始时间
-        //     const startTime = performance.now();
-
-        //     // 动画函数
-        //     function animation(currentTime) {
-        //         // 计算已过去的时间比例
-        //         const elapsedTime = currentTime - startTime;
-        //         const progress = Math.min(elapsedTime / duration, 1);
-
-        //         // 缓动函数：使滚动先慢后快再慢
-        //         const easeProgress = progress < 0.5
-        //             ? 4 * progress * progress * progress
-        //             : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-        //         // 计算当前滚动位置并应用
-        //         window.scrollTo(0, startPosition + distance * easeProgress);
-
-        //         // 未完成则继续下一帧
-        //         if (progress < 1) {
-        //             requestAnimationFrame(animation);
-        //         }
-        //     }
-
-        //     // 启动动画
-        //     requestAnimationFrame(animation);
-        // }
-
-        // // 处理所有锚点链接
-        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        //     anchor.addEventListener('click', function (e) {
-        //         // 阻止默认跳转行为
-        //         e.preventDefault();
-
-        //         // 获取目标ID（从href属性中提取）
-        //         const targetId = this.getAttribute('href');
-
-        //         // 处理回到顶部的情况（href="#"）
-        //         if (targetId === '#') {
-        //             smoothScrollTo(document.documentElement);
-        //             return;
-        //         }
-
-        //         // 获取目标元素
-        //         const targetElement = document.querySelector(targetId);
-
-        //         // 如果目标元素存在，则滚动到该元素
-        //         if (targetElement) {
-        //             smoothScrollTo(targetElement);
-        //         }
-        //     });
-        // });
-
+        //点击导航栏滚动整体板块
+        // const sectionnav_links = document.querySelectorAll(".section_nav ul li a");
 
         //点击导航栏滚动整体板块
-        const nav_li = document.querySelectorAll("#section1>nav>ul>li");
+        const sectionnav_links = document.querySelectorAll(".section_nav ul li a");
 
-        Array.from(nav_li).forEach(function (li, index) {
-            li.addEventListener("click", function (e) {
+        Array.from(sectionnav_links).forEach(function (link, index) {
+            link.addEventListener("click", function (e) {
                 e.preventDefault();
-
-
                 currentindex = index;
                 sectionremove();
-
-
             })
-
         })
+
+
         //滚动方法
         function sectionremove() {
             isScrolling = true;
@@ -168,6 +108,7 @@ export default {
             Array.from(sections).forEach(function (section) {
 
                 section.style.transform = `translateY(${translateValue}vh)`;
+                console.log(translateValue);
             });
 
             setTimeout(() => {
@@ -185,19 +126,16 @@ export default {
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
-    /* scroll-behavior: smooth; */
+
 }
 
 .container {
 
 
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
-
-
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 
 
     /* align-items: center;  */
@@ -205,9 +143,9 @@ export default {
 
 
 
-.container>* {
-    /* width: 100%;
-    height: 100vh; */
+.container>.section {
+    /* width: 100%; */
+    height: 100vh;
     transition: transform 0.7s cubic-bezier(0.17, 0.67, 0.48, 1.36);
 }
 </style>
